@@ -31,9 +31,13 @@ const Featuresec = () => {
   ];
   return (
     <div id='feature-sec'>
-      <h1>feature section</h1>
+      <div id="title" className='flex justify-center p-5 m-4'>
+      <h1 className='text-[2vw] font-semibold '>Feature Plants</h1>
 
-      <section className='flex justify-around'>
+      </div>
+      
+
+      <section className='flex gap-12 justify-center'>
       {cardData.map((data,index)=>(
         <Featurecard
         key={index}

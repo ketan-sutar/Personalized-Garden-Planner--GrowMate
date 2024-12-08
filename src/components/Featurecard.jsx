@@ -6,7 +6,7 @@ const Featurecard = ({ title, image, paragraph }) => {
     <>
       <Card
         shadow={false}
-        className="relative grid h-[30vw] sm:h-[25vw] w-full max-w-[18vw] items-end justify-center overflow-hidden text-center"
+        className="relative  grid h-[30vw] sm:h-[25vw] w-full max-w-[18vw] items-end justify-center overflow-hidden text-center"
       >
         <CardHeader
           floated={false}

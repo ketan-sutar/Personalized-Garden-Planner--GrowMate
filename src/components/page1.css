@@ -15,14 +15,15 @@
 
 #feature-sec{
     width: 100%;
-    height: 100vh;
+    height: 85vh;
     /* background-color: bisque; */
 }
 
 #tool-sec{
     width: 100%;
-    height: 100vh;
-    background-color: greenyellow;
+    height: auto;
+    padding-bottom: 9vw;
+    /* background-color: greenyellow; */
 }
 
 #footer-sec{
