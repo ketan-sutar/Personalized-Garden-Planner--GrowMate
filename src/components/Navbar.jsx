@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import { Collapse } from "@material-tailwind/react"; // Import Collapse
+import { useEffect, useState } from "react";
 import {
   Navbar as MTNavbar,
   MobileNav,
@@ -6,6 +7,10 @@ import {
   Button,
   IconButton,
 } from "@material-tailwind/react";
+
+import "./page1.css";
+
+
 
 const Navbar = () => {
   const [openNav, setOpenNav] = useState(false);
@@ -19,13 +24,12 @@ const Navbar = () => {
   }, []);
 
   const navList = (
-    // This is the navigation list, it contains links for the navbar
-    <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 justify-center">
+    <ul id="navs" className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 justify-center">
       <Typography
         as="li"
         variant="small"
-        color="white" // Change text color to white
-        className="p-1 font-bold" // Make text bold
+        color="white"
+        className="p-1 font-bold"
       >
         <a href="#" className="flex items-center">
           Tips
@@ -34,8 +38,8 @@ const Navbar = () => {
       <Typography
         as="li"
         variant="small"
-        color="white" // Change text color to white
-        className="p-1 font-bold" // Make text bold
+        color="white"
+        className="p-1 font-bold"
       >
         <a href="#" className="flex items-center">
           Features
@@ -44,8 +48,8 @@ const Navbar = () => {
       <Typography
         as="li"
         variant="small"
-        color="white" // Change text color to white
-        className="p-1 font-bold" // Make text bold
+        color="white"
+        className="p-1 font-bold"
       >
         <a href="#" className="flex items-center">
           Tools
@@ -54,8 +58,8 @@ const Navbar = () => {
       <Typography
         as="li"
         variant="small"
-        color="white" // Change text color to white
-        className="p-1 font-bold" // Make text bold
+        color="white"
+        className="p-1 font-bold"
       >
         <a href="#" className="flex items-center">
           Contact Us
@@ -65,26 +69,22 @@ const Navbar = () => {
   );
 
   return (
-    <div className="w-full h-auto">
-      {/* Material Tailwind Navbar component */}
-      <MTNavbar className="sticky top-0 z-10 h-max max-w-full px-4 py-2 lg:px-8 lg:py-4 bg-transparent border-none">
+    <div id="main-nav" className="w-full h-auto">
+      <MTNavbar className="sticky top-0 z-10 h-max max-w-full px-4 py-2 lg:px-8 lg:py-4 bg-transparent backdrop-filter-none border-none">
         <div className="flex items-center justify-between text-white">
-          {/* Change text color to white */}
-          {/* Navbar Logo */}
           <Typography
             as="a"
             href="#"
-            className="mr-4 cursor-pointer py-1.5 font-bold" // Make text bold
+            id="logo"
+            className="mr-4 cursor-pointer py-1.5 font-bold"
           >
             GrowMate
           </Typography>
           <div className="flex items-center gap-4">
-            {/* Desktop Navigation Links */}
             <div className="mr-4 hidden lg:block flex-1 justify-center">
               {navList}
             </div>
             <div className="flex items-center gap-x-1">
-              {/* Log In Button */}
               <Button
                 variant="gradient"
                 size="sm"
@@ -93,14 +93,12 @@ const Navbar = () => {
                 <span>Log in</span>
               </Button>
             </div>
-            {/* Mobile Menu Icon */}
             <IconButton
               variant="text"
               className="ml-auto h-6 w-6 text-white hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
               ripple={false}
               onClick={() => setOpenNav(!openNav)}
             >
-              {/* Toggle between hamburger and close icon */}
               {openNav ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -134,16 +132,14 @@ const Navbar = () => {
             </IconButton>
           </div>
         </div>
-        {/* Mobile Navigation Menu */}
-        <MobileNav open={openNav}>
-          {navList}
-          <div className="flex items-center gap-x-1">
-            {/* Sign in Button in Mobile Menu */}
+        <Collapse open={openNav}>
+          <div className="flex flex-col items-center gap-4 lg:hidden">
+            {navList}
             <Button fullWidth variant="gradient" size="sm">
               <span>Sign in</span>
             </Button>
           </div>
-        </MobileNav>
+        </Collapse>
       </MTNavbar>
     </div>
   );

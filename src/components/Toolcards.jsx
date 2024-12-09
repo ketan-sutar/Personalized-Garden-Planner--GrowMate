@@ -1,7 +1,7 @@
 import React from "react";
-import orgimg from '../assets/organizeimg.jpg'
-import toolimg from '../assets/toolimg.jpg'
-import lastimg from '../assets/lastimg.jpg'
+import orgimg from "../assets/organizeimg.jpg";
+import toolimg from "../assets/toolimg.jpg";
+import lastimg from "../assets/lastimg.jpg";
 import {
   Card,
   CardHeader,
@@ -30,8 +30,8 @@ const Toolcards = () => {
             Tool Features
           </Typography>
           <Typography color="gray" className="mb-8 font-normal">
-            Discover the essentail tools and features of the Personal Garden
-            Planner to make your gardening experience seamless.
+            Discover essential tools and features to make gardening simple and
+            seamless.
           </Typography>
           <a href="#" className="inline-block">
             <Button
@@ -61,8 +61,8 @@ const Toolcards = () => {
             Organize & Track
           </Typography>
           <Typography color="gray" className="mb-8 font-normal">
-            Learn how the Garden Planner helps you stay organized and track
-            every planting with complete ease.
+            Use the Garden Planner to stay organized and track all your
+            plantings effortlessly.
           </Typography>
           <a href="#" className="inline-block">
             <Button
@@ -92,8 +92,8 @@ const Toolcards = () => {
             Gardening Tips
           </Typography>
           <Typography color="gray" className="mb-8 font-normal">
-            Explore the latest gardening tips and trends to keep your garden
-            thriving all year round.
+            Discover gardening tips and trends to help your garden flourish
+            every season with ease.
           </Typography>
           <a href="#" className="inline-block">
             <Button
