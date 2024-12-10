@@ -1,8 +1,18 @@
 import React from "react";
 import "./page1.css";
 import Navbar from "./Navbar";
+import { useNavigate } from "react-router-dom";
+
+
+
+
+
 
 const Homemain = () => {
+
+  const navigate=useNavigate();
+  
+
   return (
     <>
       <section id="home">
@@ -14,7 +24,7 @@ const Homemain = () => {
 
           </div>
           <div id="btn-sec" className="pl-[5.5vw] pt-5" >
-            <button className="bg-green-600 text-white px-4 py-2 text-[1.2vw] rounded-lg">Get Started</button>
+            <button onClick={()=> navigate('/Login') }   className="bg-green-600 text-white px-4 py-2 text-[1.2vw] rounded-lg">Get Started</button>
           </div>
           
         </div>

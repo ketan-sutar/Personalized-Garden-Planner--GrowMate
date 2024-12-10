@@ -6,14 +6,19 @@ import Toolsec from "../components/Toolsec";
 import Footer from "../components/Footer";
 
 const Page = () => {
+ 
   return (
     <>
-      <section id="page1-sec" className="min-h-screen h-auto w-full overflow-y-auto">
+      <section
+        id="page1-sec"
+        className="min-h-screen h-auto w-full overflow-y-auto"
+      >
+        
         <Homemain />
-        <Tipsec/>
-        <Featuresec/>
-        <Toolsec/>
-        <Footer/>
+        <Tipsec />
+        <Featuresec />
+        <Toolsec />
+        <Footer />
       </section>
     </>
   );

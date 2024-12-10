@@ -9,10 +9,16 @@ import {
 } from "@material-tailwind/react";
 
 import "./page1.css";
+import { useNavigate } from "react-router-dom";
 
 
 
 const Navbar = () => {
+  const navigate=useNavigate();
+
+
+
+
   const [openNav, setOpenNav] = useState(false);
 
   useEffect(() => {
@@ -31,7 +37,7 @@ const Navbar = () => {
         color="white"
         className="p-1 font-bold"
       >
-        <a href="#" className="flex items-center">
+        <a href="/Tipsec" className="flex items-center">
           Tips
         </a>
       </Typography>
@@ -89,6 +95,7 @@ const Navbar = () => {
                 variant="gradient"
                 size="sm"
                 className="hidden lg:inline-block"
+                onClick={()=>navigate('/Login')}
               >
                 <span>Log in</span>
               </Button>
